@@ -1,0 +1,16 @@
+use crate::{aoc::AdventOfCode, not_implemented};
+
+pub struct Day09 {}
+
+impl Day09 {}
+
+not_implemented!(Day09, "day09");
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::{puzzle1_test, puzzle2_test};
+
+    puzzle1_test!(Day09, "0", "0");
+    puzzle2_test!(Day09, "0", "0");
+}
