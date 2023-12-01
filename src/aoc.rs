@@ -112,3 +112,23 @@ macro_rules! puzzle2_test {
         }
     )+)
 }
+
+#[macro_export]
+macro_rules! puzzle2_test_extra {
+    ($($type:ident),+ $(,)?, $test_expected:expr, $expected:expr) => ($(
+        #[test]
+        fn puzzle_2() {
+            let mut day = $type::new();
+
+            let test_str: String = file_util::file_to_string(format!("inputs/{}_test_2.txt", day.day_str()));
+            day.run_puzzle2(test_str);
+            let actual_value = day.get_puzzle2_result().unwrap_or(String::from("0"));
+            assert_eq!($test_expected, actual_value);
+
+            let main_str: String = file_util::file_to_string(format!("inputs/{}.txt", day.day_str()));
+            day.run_puzzle2(main_str);
+            let actual_value = day.get_puzzle2_result().unwrap_or(String::from("0"));
+            assert_eq!($expected, actual_value);
+        }
+    )+)
+}
