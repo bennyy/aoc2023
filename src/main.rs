@@ -56,6 +56,7 @@ mod day23;
 mod day24;
 mod day25;
 mod file_util;
+mod math_util;
 
 fn run_all_puzzles(input_day: Option<u32>) {
     let array: [Box<dyn AdventOfCode>; 25] = [
