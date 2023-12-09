@@ -34,11 +34,6 @@ impl Day08 {
             let left: String = parsable_string.next().unwrap().to_owned();
             let right: String = parsable_string.next().unwrap().to_owned();
 
-            if this == right && this == left {
-                println!("Suspekt line: {}", node);
-                continue;
-            }
-
             map.insert(this.to_string(), Node { left, right });
         }
         Map { instructions, map }
