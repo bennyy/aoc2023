@@ -71,15 +71,15 @@ impl AdventOfCode for Day06 {
         let total_time: i64 = total_time_str.parse::<i64>().unwrap();
         let total_distance: i64 = total_distance_str.parse::<i64>().unwrap();
 
-        let mut wins = 0;
-        for ms in 0..=total_time {
-            let time_left = total_time - ms;
-            let tot_distance = time_left * ms;
-            if tot_distance > total_distance {
-                wins += 1;
-            }
-        }
-        self.puzzle2_result = wins;
+        let a = 1_f64;
+        let b = total_time as f64;
+        let c = total_distance as f64;
+
+        let discriminant = b * b - 4.0 * a * c;
+        let root1 = ((-b + discriminant.sqrt()) / (2.0 * a)).floor() as i64;
+        let root2 = ((-b - discriminant.sqrt()) / (2.0 * a)).ceil() as i64;
+
+        self.puzzle2_result = root1 - root2 + 1;
     }
 
     fn get_puzzle1_result(&self) -> Option<String> {
