@@ -1,10 +1,46 @@
-use crate::{aoc::AdventOfCode, not_implemented};
+use crate::{aoc::AdventOfCode, default_aoc_struct, default_new_ctor};
 
-pub struct Day12 {}
+default_aoc_struct!(Day12, i64);
+default_new_ctor!(Day12);
 
-impl Day12 {}
+#[derive(Debug, Clone)]
+struct Dummy {
+}
 
-not_implemented!(Day12, "day12");
+impl Day12 {
+    fn parse_data(input_str: String) -> Vec<Dummy> {
+        let mut return_vec: Vec<Dummy> = Vec::new();
+        let mut lines_str = input_str.split('\n');
+
+        return_vec
+    }
+}
+
+impl AdventOfCode for Day12 {
+    fn day_str(&self) -> String {
+        "day12".to_owned()
+    }
+
+    fn run_puzzle1(&mut self, input_str: String) {
+        let data = Day12::parse_data(input_str);
+
+        self.puzzle1_result = 0;
+    }
+
+    fn run_puzzle2(&mut self, input_str: String) {
+        let data = Day12::parse_data(input_str);
+
+        self.puzzle2_result = 0;
+    }
+
+    fn get_puzzle1_result(&self) -> Option<String> {
+        Some(self.puzzle1_result.to_string())
+    }
+
+    fn get_puzzle2_result(&self) -> Option<String> {
+        Some(self.puzzle2_result.to_string())
+    }
+}
 
 #[cfg(test)]
 mod tests {
