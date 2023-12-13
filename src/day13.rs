@@ -4,13 +4,12 @@ default_aoc_struct!(Day13, i64);
 default_new_ctor!(Day13);
 
 #[derive(Debug, Clone)]
-struct Dummy {
-}
+struct Dummy {}
 
 impl Day13 {
     fn parse_data(input_str: String) -> Vec<Dummy> {
-        let mut return_vec: Vec<Dummy> = Vec::new();
-        let mut lines_str = input_str.split('\n');
+        let return_vec: Vec<Dummy> = Vec::new();
+        let _lines_str = input_str.split('\n');
 
         return_vec
     }
@@ -22,13 +21,13 @@ impl AdventOfCode for Day13 {
     }
 
     fn run_puzzle1(&mut self, input_str: String) {
-        let data = Day13::parse_data(input_str);
+        let _data = Day13::parse_data(input_str);
 
         self.puzzle1_result = 0;
     }
 
     fn run_puzzle2(&mut self, input_str: String) {
-        let data = Day13::parse_data(input_str);
+        let _data = Day13::parse_data(input_str);
 
         self.puzzle2_result = 0;
     }

@@ -1,6 +1,4 @@
-use std::{
-    collections::{HashSet, VecDeque},
-};
+use std::collections::{HashSet, VecDeque};
 
 use crate::{aoc::AdventOfCode, default_aoc_struct, default_new_ctor};
 
@@ -122,7 +120,6 @@ impl Day10 {
 
         inside
     }
-
 }
 
 impl AdventOfCode for Day10 {
